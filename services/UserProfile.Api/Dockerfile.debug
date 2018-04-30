@@ -1,0 +1,13 @@
+FROM microsoft/aspnetcore:latest
+
+ADD ./bin/Debug/netcoreapp2.0/publish /build
+
+WORKDIR /build
+
+
+
+EXPOSE 80
+
+#Keep the debugger container on
+#ENTRYPOINT ["tail", "-f" "/dev/null"]
+ENTRYPOINT ["dotnet", "UserProfile.Api.dll"]

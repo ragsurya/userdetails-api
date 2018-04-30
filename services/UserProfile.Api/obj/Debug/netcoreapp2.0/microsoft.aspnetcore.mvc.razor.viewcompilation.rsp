@@ -1,0 +1,5 @@
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api
+--output-path=obj/Debug/netcoreapp2.0/
+--application-name=UserProfile.Api
+--content-root=/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api
+--file=

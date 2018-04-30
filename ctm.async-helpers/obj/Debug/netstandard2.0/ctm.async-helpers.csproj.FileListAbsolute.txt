@@ -1,0 +1,8 @@
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/bin/Debug/netstandard2.0/ctm.async-helpers.deps.json
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/bin/Debug/netstandard2.0/ctm.async-helpers.dll
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/bin/Debug/netstandard2.0/ctm.async-helpers.pdb
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/obj/Debug/netstandard2.0/ctm.async-helpers.csproj.CoreCompileInputs.cache
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/obj/Debug/netstandard2.0/ctm.async-helpers.AssemblyInfoInputs.cache
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/obj/Debug/netstandard2.0/ctm.async-helpers.AssemblyInfo.cs
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/obj/Debug/netstandard2.0/ctm.async-helpers.dll
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/ctm.async-helpers/obj/Debug/netstandard2.0/ctm.async-helpers.pdb

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  userdetials.api:
+    image: userdetails.api
+    build:
+      context: ./services/UserProfile.api
+      dockerfile: Dockerfile.debug
+    ports: 
+    - "8100:80"
+    volumes: 
+      - ./services/userprofile.api/bin/pub/:/app
+    container_name: userprofile.api
+
+
+  

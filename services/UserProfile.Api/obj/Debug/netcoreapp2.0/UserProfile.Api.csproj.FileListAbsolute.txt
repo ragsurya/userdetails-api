@@ -1,0 +1,10 @@
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/bin/Debug/netcoreapp2.0/UserProfile.Api.deps.json
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/bin/Debug/netcoreapp2.0/UserProfile.Api.runtimeconfig.json
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/bin/Debug/netcoreapp2.0/UserProfile.Api.runtimeconfig.dev.json
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/bin/Debug/netcoreapp2.0/UserProfile.Api.dll
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/bin/Debug/netcoreapp2.0/UserProfile.Api.pdb
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/obj/Debug/netcoreapp2.0/UserProfile.Api.csproj.CoreCompileInputs.cache
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/obj/Debug/netcoreapp2.0/UserProfile.Api.AssemblyInfoInputs.cache
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/obj/Debug/netcoreapp2.0/UserProfile.Api.AssemblyInfo.cs
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/obj/Debug/netcoreapp2.0/UserProfile.Api.dll
+/Users/raghavsuryanarayanan/dev/rag/ctm.case-study/services/UserProfile.Api/obj/Debug/netcoreapp2.0/UserProfile.Api.pdb
