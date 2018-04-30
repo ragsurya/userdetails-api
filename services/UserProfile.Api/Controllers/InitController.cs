@@ -45,6 +45,19 @@ namespace UserProfile.Api.Controllers {
                             PostCode = "PE7 8GW"
                         }
                 });
+                _repository.AddUserDetail(new UserProfileModel() {
+                        Email = "rag1@gmail.com",
+                        DateOfBirth = "27/03/1981",
+                        UserId = 101,
+                        UserName = "rag1.surya",
+                        Address = new Address
+                        {
+                            AddressLine1 = "10 Carolside Grove"   ,
+                            AddressLine2 = "Hampton Gardens",
+                            City = "Peterborough",
+                            PostCode = "PE7 8QF"
+                        }
+                });
 
                 return "Collections added";
             }
