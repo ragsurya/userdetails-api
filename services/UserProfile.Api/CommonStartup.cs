@@ -4,29 +4,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using UserProfile.Api.Models;
 using UserProfile.Api.Data;
 using UserProfile.Api.Interfaces;
+using UserProfile.Api.Models;
 using zipkin4net;
+using zipkin4net.Middleware;
 using zipkin4net.Tracers.Zipkin;
 using zipkin4net.Transport;
 using zipkin4net.Transport.Http;
-using zipkin4net.Middleware;
-
-
 
 namespace UserProfile.Api {
-    public class Startup  {
-         public Startup (IConfiguration configuration) {
-            Configuration = configuration;
-        }
-         public IConfiguration Configuration { get; }
+    public abstract class CommonStartup {
+        // public CommonStartup (IConfiguration configuration) {
+        //     Configuration = configuration;
+        // }
+
+        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
@@ -51,6 +49,7 @@ namespace UserProfile.Api {
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure (IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
 
+            var config = ConfigureSettings.CreateConfiguration ();
 
             loggerFactory.AddConsole ();
 
@@ -73,9 +72,8 @@ namespace UserProfile.Api {
 
             lifetime.ApplicationStopped.Register (() => TraceManager.Stop ());
             app.UseTracing ("userdetailsService");
-
-            app.UseMvc();
            // Run (app, config);
         }
+       // abstract protected void Run (IApplicationBuilder app, IConfiguration configuration);
     }
 }

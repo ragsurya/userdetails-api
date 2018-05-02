@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "Apache.Thrift/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/ThriftNetStandard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/ThriftNetStandard.dll": {}
+        }
+      },
       "DnsClient/1.0.7": {
         "type": "package",
         "dependencies": {
@@ -4762,6 +4774,28 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "System.Threading.Tasks.Dataflow/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
+        }
+      },
       "System.Threading.Tasks.Extensions/4.4.0": {
         "type": "package",
         "compile": {
@@ -4987,10 +5021,59 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "zipkin4net/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Apache.Thrift": "1.0.2",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Specialized": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.NetworkInformation": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks.Dataflow": "4.7.0",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/zipkin4net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/zipkin4net.dll": {}
+        }
+      },
+      "zipkin4net.middleware.aspnetcore/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "1.1.1",
+          "Microsoft.Extensions.Logging": "1.1.1",
+          "NETStandard.Library": "1.6.1",
+          "System.Net.Http": "4.3.0",
+          "zipkin4net": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/zipkin4net.middleware.aspnetcore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/zipkin4net.middleware.aspnetcore.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Apache.Thrift/1.0.2": {
+      "sha512": "lnz+UCjY7sOPUxtyBlrV1g7hzlNgWvqbuysB2P2Ysl+BtilF2K6t1pzIrdjW5zUaD/EgNjkk/LsUhBNdPPFqLA==",
+      "type": "package",
+      "path": "apache.thrift/1.0.2",
+      "files": [
+        "apache.thrift.1.0.2.nupkg.sha512",
+        "apache.thrift.nuspec",
+        "lib/net451/ThriftNetStandard.dll",
+        "lib/netstandard1.4/ThriftNetStandard.dll",
+        "lib/netstandard1.6/ThriftNetStandard.dll"
+      ]
+    },
     "DnsClient/1.0.7": {
       "sha512": "f3k5ufhUSL658fy/ac1mReqRIr0jGMyOJFvBqJ+7cASq01NIysYbrrRDjboYKAGrd0Y2mc1A749uQvT8vAA91A==",
       "type": "package",
@@ -12469,6 +12552,23 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "System.Threading.Tasks.Dataflow/4.7.0": {
+      "sha512": "wcKLDI8tN5KpcMcTQwXfcLHrFdfINIxDBOZS3rE8QqOds/0fRhCkR+IEfQokxT7s/Yluqk+LG/ZqZdQmA/xgCw==",
+      "type": "package",
+      "path": "system.threading.tasks.dataflow/4.7.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.XML",
+        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.XML",
+        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll",
+        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.XML",
+        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll",
+        "system.threading.tasks.dataflow.4.7.0.nupkg.sha512",
+        "system.threading.tasks.dataflow.nuspec"
+      ]
+    },
     "System.Threading.Tasks.Extensions/4.4.0": {
       "sha512": "SPKfFGbpQsK5Srz2Kq3URgvC90yoOyBE8H1quDA2+MAJ2HAzFmV3biOgPv2Ck3mPAvdKngo3QHi2BNwUQDRVvA==",
       "type": "package",
@@ -13056,13 +13156,38 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "zipkin4net/1.2.0": {
+      "sha512": "6dYyRYaY6B0NgHTcWuDoyBqtrMYNY+VCXC4gbKbE1AWTP/cZdg0HVdqQrTShby4LKgCKE0EIW7a2T/pz921fMQ==",
+      "type": "package",
+      "path": "zipkin4net/1.2.0",
+      "files": [
+        "lib/net451/zipkin4net.dll",
+        "lib/netstandard1.4/zipkin4net.dll",
+        "lib/netstandard1.6/zipkin4net.dll",
+        "zipkin4net.1.2.0.nupkg.sha512",
+        "zipkin4net.nuspec"
+      ]
+    },
+    "zipkin4net.middleware.aspnetcore/1.2.0": {
+      "sha512": "Ez/3d25Y+5P1K9zem/Cjgh3K4MoQilH2nV3+xxhRu6hsLFMPIv4mXwZIeBcHMrmS4QNgMQWIgAYCPqNTHob6Ug==",
+      "type": "package",
+      "path": "zipkin4net.middleware.aspnetcore/1.2.0",
+      "files": [
+        "lib/net461/zipkin4net.middleware.aspnetcore.dll",
+        "lib/netstandard1.6/zipkin4net.middleware.aspnetcore.dll",
+        "zipkin4net.middleware.aspnetcore.1.2.0.nupkg.sha512",
+        "zipkin4net.middleware.aspnetcore.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MongoDB.Driver >= 2.6.0"
+      "MongoDB.Driver >= 2.6.0",
+      "zipkin4net >= 1.2.0",
+      "zipkin4net.middleware.aspnetcore >= 1.2.0"
     ]
   },
   "packageFolders": {
@@ -13116,6 +13241,14 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.6.0, )"
+          },
+          "zipkin4net": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
+          "zipkin4net.middleware.aspnetcore": {
+            "target": "Package",
+            "version": "[1.2.0, )"
           }
         },
         "imports": [

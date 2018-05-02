@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "0a6eb7cd33d21f798643f6b5855b6fdc47ec2fde"
+    "signature": "5d4b0b42c5c071d38e239c9a459c4f8feb43d310"
   },
   "compilationOptions": {
     "defines": [
@@ -25,13 +25,26 @@
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.5",
           "Microsoft.NETCore.App": "2.0.0",
-          "MongoDB.Driver": "2.6.0"
+          "MongoDB.Driver": "2.6.0",
+          "zipkin4net": "1.2.0",
+          "zipkin4net.middleware.aspnetcore": "1.2.0"
         },
         "runtime": {
           "UserProfile.Api.dll": {}
         },
         "compile": {
           "UserProfile.Api.dll": {}
+        }
+      },
+      "Apache.Thrift/1.0.2": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/ThriftNetStandard.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/ThriftNetStandard.dll": {}
         }
       },
       "DnsClient/1.0.7": {
@@ -3870,6 +3883,21 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Threading.Tasks.Dataflow/4.7.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
       "System.Threading.Tasks.Extensions/4.4.0": {},
       "System.Threading.Tasks.Parallel/4.3.0": {
         "dependencies": {
@@ -4010,6 +4038,41 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "zipkin4net/1.2.0": {
+        "dependencies": {
+          "Apache.Thrift": "1.0.2",
+          "NETStandard.Library": "2.0.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.NetworkInformation": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks.Dataflow": "4.7.0",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/zipkin4net.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/zipkin4net.dll": {}
+        }
+      },
+      "zipkin4net.middleware.aspnetcore/1.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "2.0.1",
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "NETStandard.Library": "2.0.0",
+          "System.Net.Http": "4.3.0",
+          "zipkin4net": "1.2.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/zipkin4net.middleware.aspnetcore.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/zipkin4net.middleware.aspnetcore.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -4195,6 +4258,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Apache.Thrift/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lnz+UCjY7sOPUxtyBlrV1g7hzlNgWvqbuysB2P2Ysl+BtilF2K6t1pzIrdjW5zUaD/EgNjkk/LsUhBNdPPFqLA==",
+      "path": "apache.thrift/1.0.2",
+      "hashPath": "apache.thrift.1.0.2.nupkg.sha512"
     },
     "DnsClient/1.0.7": {
       "type": "package",
@@ -6170,6 +6240,13 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
+    "System.Threading.Tasks.Dataflow/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wcKLDI8tN5KpcMcTQwXfcLHrFdfINIxDBOZS3rE8QqOds/0fRhCkR+IEfQokxT7s/Yluqk+LG/ZqZdQmA/xgCw==",
+      "path": "system.threading.tasks.dataflow/4.7.0",
+      "hashPath": "system.threading.tasks.dataflow.4.7.0.nupkg.sha512"
+    },
     "System.Threading.Tasks.Extensions/4.4.0": {
       "type": "package",
       "serviceable": true,
@@ -6260,6 +6337,20 @@
       "sha512": "sha512-W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
+    },
+    "zipkin4net/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6dYyRYaY6B0NgHTcWuDoyBqtrMYNY+VCXC4gbKbE1AWTP/cZdg0HVdqQrTShby4LKgCKE0EIW7a2T/pz921fMQ==",
+      "path": "zipkin4net/1.2.0",
+      "hashPath": "zipkin4net.1.2.0.nupkg.sha512"
+    },
+    "zipkin4net.middleware.aspnetcore/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ez/3d25Y+5P1K9zem/Cjgh3K4MoQilH2nV3+xxhRu6hsLFMPIv4mXwZIeBcHMrmS4QNgMQWIgAYCPqNTHob6Ug==",
+      "path": "zipkin4net.middleware.aspnetcore/1.2.0",
+      "hashPath": "zipkin4net.middleware.aspnetcore.1.2.0.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.0.0": {
       "type": "package",
