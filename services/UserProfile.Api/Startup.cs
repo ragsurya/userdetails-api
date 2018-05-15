@@ -67,6 +67,7 @@ namespace UserProfile.Api {
                 var logger = new TracingLogger (loggerFactory, "zipkin4net");
                 var httpSender = new HttpZipkinSender ("http://localhost:9411", "application/json");
                 var tracer = new ZipkinTracer (httpSender, new JSONSpanSerializer (), statistics);
+                TraceManager.Trace128Bits = true;
                 TraceManager.RegisterTracer (tracer);
                 TraceManager.Start (logger);
             });

@@ -18,7 +18,7 @@ namespace UserProfile.Api.Controllers {
         // GET api/values
         [HttpGet("{email}")]
         public async Task<UserProfileModel> Get (string email) {
-            Console.WriteLine("REQUEST START DATE", DateTime.Now);
+            //throw new Exception("Not a great thing to see");
             return await _userDetailsRepository.GetUserDetailAsync(email) ?? new UserProfileModel();
             
         }
